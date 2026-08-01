@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Search🔍</title>
+    <meta name = "description" content = "🔍Search any GitHub username to instantly see their profile avatar, bio and top 5 latest repositories.">
+    <meta property = "og:title" content="GitHub Profile Finder App">
+    <meta property="og:description" content ="🔍Search any GitHubusername to instantly see their profile avatar, bio and top 5 repositories.">
+    <meta property = "og:type" content ="website">
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    <div class="container">
+
+
+        <h1>💻 GitHub Profile Finder</h1>
+
+        <!--mode toggle switch-->
+
+        <div class="toggle-container">
+            <span class = "mode-label">Single Search🔍</span>
+            <label class ="switch">
+                <input type="checkbox" id="mode-toggle">
+                <span class = "slider round"></span>
+            </label>
+            <span class="mode-label">⚔️ Battle Mode</span>
+        </div>
+
+         <!--Single search UI-->
+
+        <div  id="single-search-ui" class="search-box">
+            <input type="text" id="search-input" placeholder="Enter GitHub username (e.g., octocat)">
+            <button id="search-btn">Search🔍</button>
+        </div>
+
+    <!--battle mode UI-->
+
+        <div id="battle-Ui" class="search-box hidden">
+            <input type="text" id="user1-input" placeholder="User first username">
+            <input type="text" id ="user2-input" placeholder ="User second username">
+            <button id="battle-btn">⚔️ Battle !</button>
+        </div>
+
+        <!--Loading spinner-->
+
+        <div id="loading" class="spinner hidden">Loading data, Please wait...</div>
+
+        <!--Error / status message-->
+        
+        <div id="error-message" class="error hidden">User Not Found</div>
+
+        <!--Result display area-->
+
+        <div id="result-container" class="profile-container">
+            
+        </div>
+
+    </div>
+
+    <script src="Script/script.js" ></script>
+    
+</body>
+</html>
