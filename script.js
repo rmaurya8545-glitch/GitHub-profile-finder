@@ -104,7 +104,7 @@ function createProfileCardHTML(data,battleStatus= null){
 
     }else if(battleStatus ==='tie'){
         cardClass += ' card-winner';
-        badgeHTML = `<span class = "badge badge-winner">🤝 Tie (${data.totalstars} ⭐)</span>`;
+        badgeHTML = `<span class = "badge badge-winner">🤝 Tie (${data.totalStars} ⭐)</span>`;
     }
 
     // data rendering to DOM
@@ -117,7 +117,7 @@ function createProfileCardHTML(data,battleStatus= null){
     <p style="color: #8b949e; font-size:0.9rem; margin:5px 0;">@${p.login}</p>
     <p style="margin: 10px 0;">${p.bio || '📋 This profile has no bio.'}</p>
     <p style="margin:10px 0"><strong>📆 Joined:</strong> ${formDate(p.created_at)}</p>
-    <p><strong>🌐 Portfolio:</strong> ${p.blog ? `a href="${p.blog.startsWith('http') ? p.blog : 'https://' + p.blog}" target="_blank" style="color:#58a6ff;">Link</a>`:'N/A'}</p>
+    <p><strong>🌐 Portfolio:</strong> ${p.blog ? `<a href="${p.blog.startsWith('http') ? p.blog : 'https://' + p.blog}" target="_blank" style="color:#58a6ff;">Link</a>`:'N/A'}</p>
     
     <h3 style="margin-top:15px; font-size:18px; border-bottom:2px solid #30363d; padding-bottom:8px;">🚀 Latest Top 5 Repos 👇</h3>
     <ul class="repo-list">
